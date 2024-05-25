@@ -3,9 +3,10 @@ from colorama import Fore, Back, Style, init
 import pwinput
 import cowsay
 from tabulate import tabulate
+from pyfiglet import Figlet
 init()
-
-cowsay.miki('Welcome to the GAME')
+f = Figlet()
+print(f.renderText('Welcome to the GAME'))
 
 p1 = 0 
 p2 = 0 
@@ -224,19 +225,15 @@ while True:
                 p2_choices.clear()
                 xx = False
                 continue
-
-        
+                
         p1_choices = p1_choices[:-1]
         p2_choices = p1_choices[:-1]
         p1_choices.append(player_input1)
         p2_choices.append(player_input2)
-                
-
-    
+        
     if p1 == 3:
         print(f' Player 1 won the game :)')
         break
     elif p2 == 3:
         print(f'Player 2 won the game :)')
         break
-    print(player_input1, player_input2)
